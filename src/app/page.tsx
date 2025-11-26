@@ -31,10 +31,17 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState('harian')
 
   const whatsappNumber = "6281584294008"
-  const whatsappMessage = "Halo, saya tertarik untuk rental mobil di RentalMobilSyariah.com"
+  const whatsappMessage = "Halo, saya tertarik untuk rental mobil di Rental Mobil Syariah"
 
   const handleWhatsAppClick = () => {
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, '_blank')
+  }
+
+  const handleLihatArmadaClick = () => {
+    const armadaSection = document.getElementById('armada-section')
+    if (armadaSection) {
+      armadaSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   const armada = [
@@ -189,7 +196,7 @@ export default function Home() {
       answer: "Syarat lepas kunci: KTP (wajib), SIM A, KK, dan 1 dokumen pendukung (PASPOR/BPJS/KARTU KREDIT/NPWP). Untuk mahasiswa tambahkan surat keterangan kuliah."
     },
     {
-      question: "Berapa jam operasional RentalMobilSyariah.com?",
+      question: "Berapa jam operasional Rental Mobil Syariah?",
       answer: "Kami buka setiap hari dari jam 06:00 - 22:00 WIB. Untuk booking darurat bisa menghubungi kami 24 jam."
     },
     {
@@ -206,7 +213,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* SEO Meta Tags */}
       <Head>
-        <title>Rental Mobil Bekasi - Murah, Amanah, Unit Terawat | RentalMobilSyariah.com</title>
+        <title>Rental Mobil Bekasi - Murah, Amanah, Unit Terawat | Rental Mobil Syariah</title>
         <meta name="description" content="Rental mobil Bekasi termurah dengan unit terawat. Sewa Avanza, Xenia, Innova, Hiace. Lepas kunci & dengan driver. Harga mulai 350rb/hari. Booking sekarang!" />
         <meta name="keywords" content="rental mobil bekasi, sewa mobil bekasi, rental mobil lepas kunci bekasi, sewa mobil harian bekasi, rental mobil bulanan bekasi" />
         <meta property="og:title" content="Rental Mobil Bekasi - Murah, Amanah, Unit Terawat" />
@@ -222,7 +229,7 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "RentalMobilSyariah.com",
+            "name": "Rental Mobil Syariah",
             "description": "Rental mobil Bekasi termurah dengan unit terawat. Sewa Avanza, Xenia, Innova, Hiace. Lepas kunci & dengan driver.",
             "url": "https://rentalmobilsyariah.com",
             "telephone": "+6281584294008",
@@ -264,7 +271,8 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8"
+                  className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-4 px-8"
+                  onClick={handleLihatArmadaClick}
                 >
                   Lihat Armada
                 </Button>
@@ -315,7 +323,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Mengapa Memilih RentalMobilSyariah.com?
+              Mengapa Memilih Rental Mobil Syariah?
             </h2>
             <p className="text-xl text-gray-600">
               Kami berkomitmen memberikan pelayanan terbaik untuk kebutuhan transportasi Anda
@@ -336,7 +344,7 @@ export default function Home() {
       </section>
 
       {/* Daftar Armada & Harga Section */}
-      <section className="py-16 bg-white">
+      <section id="armada-section" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -563,7 +571,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">RentalMobilSyariah.com</h3>
+              <h3 className="text-2xl font-bold mb-4 text-blue-400">Rental Mobil Syariah</h3>
               <p className="text-gray-400">
                 Rental mobil Bekasi terpercaya dengan harga terjangkau dan unit terawat.
               </p>
@@ -609,7 +617,7 @@ export default function Home() {
           </div>
           <Separator className="my-8 bg-gray-700" />
           <div className="text-center text-gray-400">
-            <p>&copy; 2024 RentalMobilSyariah.com. All rights reserved.</p>
+            <p>&copy; 2024 Rental Mobil Syariah. All rights reserved.</p>
           </div>
         </div>
       </footer>
