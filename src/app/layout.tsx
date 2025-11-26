@@ -14,24 +14,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
-  icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
-  },
+  title: "Rental Mobil Syariah - Rental Mobil Bekasi Murah & Terpercaya",
+  description: "Rental mobil Bekasi termurah dengan unit terawat. Sewa Avanza, Xenia, Innova, Hiace. Lepas kunci & dengan driver. Harga mulai 350rb/hari. Booking sekarang!",
+  keywords: ["rental mobil bekasi", "sewa mobil bekasi", "rental mobil lepas kunci bekasi", "sewa mobil harian bekasi", "rental mobil bulanan bekasi", "rental mobil syariah"],
+  authors: [{ name: "Rental Mobil Syariah" }],
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Rental Mobil Syariah - Rental Mobil Bekasi",
+    description: "Rental mobil Bekasi termurah dengan unit terawat. Banyak pilihan mobil, bisa lepas kunci & dengan driver.",
+    url: "https://rentalmobilsyariah.com",
+    siteName: "Rental Mobil Syariah",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Rental Mobil Syariah - Rental Mobil Bekasi",
+    description: "Rental mobil Bekasi termurah dengan unit terawat. Banyak pilihan mobil, bisa lepas kunci & dengan driver.",
   },
 };
 
@@ -41,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="id" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
